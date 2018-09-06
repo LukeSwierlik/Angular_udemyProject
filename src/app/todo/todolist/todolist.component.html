@@ -1,0 +1,32 @@
+<div class="row mb-4">
+    <div class="col-12">
+        <h1>Todo List:</h1>
+    </div>
+
+    <div class="col-12">
+        <div class="form-group">
+            <input placeholder="Task" type="text" class="form-control" [(ngModel)]="newTodoTitle"
+                   (keyup.enter)="addTodo()"/>
+        </div>
+
+        <button type="submit" class="btn btn-primary" (click)="addTodo()">Add</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let todo of todos; let ind = index">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="filled-in-box{{ todo.id }}" [(ngModel)]="todo.complete">
+                    <label for="filled-in-box{{ todo.id }}" class="custom-control-label" [ngClass]="{'checked': todo.complete}">{{ todo.title }}</label>
+                    <button type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true" (click)="deleteTodo(ind)">&times;</span>
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
