@@ -2,8 +2,7 @@ import {Component, ElementRef, EventEmitter, OnInit, Output, ViewChild} from '@a
 
 @Component({
     selector: 'app-cockpit',
-    templateUrl: './cockpit.component.html',
-    styleUrls: ['./cockpit.component.css']
+    templateUrl: './cockpit.component.html'
 })
 export class CockpitComponent implements OnInit {
     @Output()

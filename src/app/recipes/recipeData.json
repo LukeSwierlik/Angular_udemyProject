@@ -1,0 +1,49 @@
+{
+    "recipes": [
+        {
+            "name": "Lorem ipsum dolor sit amet.",
+            "description": "Sed dui mauris, auctor eu magna sed, sagittis vulputate tellus. Sed convallis facilisis justo, id dignissim dolor porta id.",
+            "imagePath": "https://techchurian.files.wordpress.com/2013/02/backbone_logo_logo_only.png",
+            "ingredients": [
+                {
+                    "name": "Meat",
+                    "amount": 4
+                },
+                {
+                    "name": "French Fies",
+                    "amount": 2
+                }
+            ]
+        },
+        {
+            "name": "Nunc sit amet malesuada justo.",
+            "description": "Etiam placerat odio sed tempus hendrerit. Nullam imperdiet posuere nunc ac cursus. Vivamus sed feugiat magna, sed cursus magna.",
+            "imagePath": "https://icotimeline.com/wp-content/uploads/2017/02/Medium-blog-logo.png",
+            "ingredients": [
+                {
+                    "name": "Blackberry",
+                    "amount": 5
+                },
+                {
+                    "name": "Raspberry",
+                    "amount": 3
+                }
+            ]
+        },
+        {
+            "name": "Nam non blandit mauris, a fermentum purus.",
+            "description": "Donec lacus mauris, maximus commodo mattis vel, mollis vel mauris. Pellentesque laoreet libero sed commodo malesuada.",
+            "imagePath": "http://www.dominique-colombani.fr/wp-content/uploads/2017/04/cpp_logo1.png",
+            "ingredients": [
+                {
+                    "name": "Pear",
+                    "amount": 3
+                },
+                {
+                    "name": "Apple",
+                    "amount": 7
+                }
+            ]
+        }
+    ]
+}

@@ -3,8 +3,7 @@ import {AccountsService} from './service/accounts.service';
 
 @Component({
     selector: 'app-services',
-    templateUrl: './services.component.html',
-    styleUrls: ['./services.component.css']
+    templateUrl: './services.component.html'
 })
 export class ServicesComponent implements OnInit {
     accounts: {

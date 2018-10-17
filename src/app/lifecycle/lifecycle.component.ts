@@ -2,29 +2,30 @@ import {Component, OnInit} from '@angular/core';
 
 @Component({
     selector: 'app-lifecycle',
-    templateUrl: './lifecycle.component.html',
-    styleUrls: ['./lifecycle.component.css']
+    templateUrl: './lifecycle.component.html'
 })
 export class LifecycleComponent implements OnInit {
     serverElements = [{
        type: 'server',
-       name: 'Testserver',
+       name: 'TestServer',
        content: 'Just a test'
     }];
 
     onServerAdded(serverData: {serverName: string, serverContent: string}) {
+        const { serverName, serverContent } = serverData;
         this.serverElements.push({
            type: 'server',
-           name: serverData.serverName,
-           content: serverData.serverContent
+           name: serverName,
+           content: serverContent
         });
     }
 
     onBlueprintAdded(blueprintData: {serverName: string, serverContent: string}) {
+        const { serverName, serverContent } = blueprintData;
         this.serverElements.push({
             type: 'blueprint',
-            name: blueprintData.serverName,
-            content: blueprintData.serverContent
+            name: serverName,
+            content: serverContent
         });
     }
 

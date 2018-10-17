@@ -8,8 +8,7 @@ import {
 
 @Component({
     selector: 'app-server-element',
-    templateUrl: './server-element.component.html',
-    styleUrls: ['./server-element.component.css']
+    templateUrl: './server-element.component.html'
 })
 export class ServerElementComponent implements OnInit,
     OnChanges,

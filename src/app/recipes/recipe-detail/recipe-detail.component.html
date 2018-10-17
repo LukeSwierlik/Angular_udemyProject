@@ -3,30 +3,37 @@
         <img [src]="recipes.imagePath" alt="{{ recipes.name }}" class="img-responsive" style="max-height: 300px">
     </div>
 
-    <div class="col-xl-12">
+    <div class="col-xl-12 mb-3">
         <h1>{{ recipes.name }}</h1>
     </div>
 
-    <div class="col-xl-12">
-        <div class="btn-group">
+    <div class="col-xl-12 mb-3">
+        <div class="btn-group" appDropdown>
             <button type="button" class="btn btn-primary dropdown-toggle">
                 Manage Recipe <span class="caret"></span>
             </button>
 
 
             <ul class="dropdown-menu">
-                <li><a href="#">To Shopping List</a></li>
-                <li><a href="#">Edit Recipe</a></li>
-                <li><a href="#">Delete Recipe</a></li>
+                <li class="dropdown-item"><a (click)="onAddToShoppingList()">To Shopping List</a></li>
+                <li class="dropdown-item"><a href="#">Edit Recipe</a></li>
+                <li class="dropdown-item"><a href="#">Delete Recipe</a></li>
             </ul>
         </div>
     </div>
 
-    <div class="col-xl-12">
+    <div class="col-xl-12 mb-3">
         {{ recipes.description }}
     </div>
 
     <div class="col-xl-12">
-        Ingredients
+        <ul class="list-group">
+            <li
+                class="list-group-item"
+                *ngFor="let ingredient of recipes.ingredients"
+            >
+                {{ ingredient.name }} - {{ ingredient.amount }}
+            </li>
+        </ul>
     </div>
 </div>
