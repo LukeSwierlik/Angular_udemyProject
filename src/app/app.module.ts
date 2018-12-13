@@ -3,7 +3,7 @@ import {NgModule} from '@angular/core';
 
 
 import {AppComponent} from './app.component';
-import {HeaderComponent} from './header/header.component';
+import {HeaderComponent} from './core/header/header.component';
 import {RecipesComponent} from './recipes/recipes.component';
 import {ShoppingListComponent} from './shopping-list/shopping-list.component';
 import {ShoppingEditComponent} from './shopping-list/shopping-edit/shopping-edit.component';
@@ -28,6 +28,13 @@ import { NewAccountComponent } from './services/new-account/new-account.componen
 import {AccountsService} from './services/service/accounts.service';
 import {LoggingService} from './services/service/logging.service';
 import {ShoppingListService} from './shopping-list/shopping-list.service';
+import { RoutingSectionComponent } from './routing-section/routing-section.component';
+import { HomeComponent } from './routing-section/home/home.component';
+import { ServersComponent } from './routing-section/servers/servers.component';
+import { ServerComponent } from './routing-section/servers/server/server.component';
+import { EditServerComponent } from './routing-section/servers/edit-server/edit-server.component';
+import { UsersComponent } from './routing-section/users/users.component';
+import { UserComponent } from './routing-section/users/user/user.component';
 
 
 @NgModule({
@@ -52,7 +59,14 @@ import {ShoppingListService} from './shopping-list/shopping-list.service';
         DropdownDirective,
         ServicesComponent,
         AccountComponent,
-        NewAccountComponent
+        NewAccountComponent,
+        RoutingSectionComponent,
+        HomeComponent,
+        ServersComponent,
+        ServerComponent,
+        EditServerComponent,
+        UsersComponent,
+        UserComponent
     ],
     imports: [
         BrowserModule,

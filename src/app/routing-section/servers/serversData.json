@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "Production Server",
+        "status": "online"
+    },
+    {
+        "id": 2,
+        "name": "Test Server",
+        "status": "offline"
+    },
+    {
+        "id": 3,
+        "name": "Dev Server",
+        "status": "offline"
+    }
+]
