@@ -12,6 +12,10 @@ import { HomeComponent } from './routing-section/home/home.component';
 import { UserComponent } from './routing-section/users/user/user.component';
 import { EditServerComponent } from './routing-section/servers/edit-server/edit-server.component';
 import { ServerComponent } from './routing-section/servers/server/server.component';
+import { AuthGuard } from './auth-guard.service';
+import { CanDeactivatedGuardService } from './routing-section/servers/edit-server/can-deactivated-guard.service';
+import { ErrorPageComponent } from './routing-section/error-page/error-page.component';
+import { ServerResolverService } from './routing-section/servers/server/server-resolver.service';
 
 const routesConfig: Routes = [
     {
@@ -56,19 +60,32 @@ const routesConfig: Routes = [
             },
             {
                 path: 'servers',
+                // canActivate: [AuthGuard],
+                canActivateChild: [AuthGuard],
                 component: ServersComponent,
                 children: [
                     {
                         path: ':id',
-                        component: ServerComponent
+                        component: ServerComponent,
+                        resolve: {
+                            serverResolve: ServerResolverService
+                        }
                     },
                     {
                         path: ':id/edit',
-                        component: EditServerComponent
+                        component: EditServerComponent,
+                        canDeactivate: [CanDeactivatedGuardService]
                     }
                 ]
             }
         ]
+    },
+    {
+        path: 'not-found',
+        component: ErrorPageComponent,
+        data: {
+            message: 'Page not found!'
+        }
     },
     {
         path: '**',

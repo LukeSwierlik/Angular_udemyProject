@@ -7,7 +7,7 @@ import IServiceInfo from './serverInfo.interface';
 })
 export class ServersService {
 
-    private servers = [];
+    private readonly servers = [];
 
     constructor() {
         this.servers = serversData;

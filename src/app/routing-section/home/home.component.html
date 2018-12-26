@@ -1,9 +1,23 @@
 <h4>Welcome to Server Manager 4.0</h4>
 <p>Manage your Servers and Users.</p>
 
-<button
-    class="btn btn-secondary"
-    (click)="onLoadServers()"
->
-    Load Servers
-</button>
+<div class="row">
+    <div class="col-6">
+        <button
+            class="btn btn-secondary"
+            (click)="onLoadServers()"
+        >
+            Load Servers
+        </button>
+    </div>
+
+    <div class="col-6">
+        <button class="btn btn-primary mr-4" (click)="onLogin()">
+            Login
+        </button>
+
+        <button class="btn btn-danger" (click)="onLogout()">
+            Logout
+        </button>
+    </div>
+</div>

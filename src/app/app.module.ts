@@ -35,6 +35,11 @@ import { ServerComponent } from './routing-section/servers/server/server.compone
 import { EditServerComponent } from './routing-section/servers/edit-server/edit-server.component';
 import { UsersComponent } from './routing-section/users/users.component';
 import { UserComponent } from './routing-section/users/user/user.component';
+import { AuthService } from './auth-service';
+import { AuthGuard } from './auth-guard.service';
+import { CanDeactivatedGuardService } from './routing-section/servers/edit-server/can-deactivated-guard.service';
+import { ErrorPageComponent } from './routing-section/error-page/error-page.component';
+import { ServerResolverService } from './routing-section/servers/server/server-resolver.service';
 
 
 @NgModule({
@@ -66,14 +71,23 @@ import { UserComponent } from './routing-section/users/user/user.component';
         ServerComponent,
         EditServerComponent,
         UsersComponent,
-        UserComponent
+        UserComponent,
+        ErrorPageComponent
     ],
     imports: [
         BrowserModule,
         FormsModule,
         routerModule,
     ],
-    providers: [AccountsService, LoggingService, ShoppingListService],
+    providers: [
+        AccountsService,
+        LoggingService,
+        ShoppingListService,
+        AuthService,
+        AuthGuard,
+        CanDeactivatedGuardService,
+        ServerResolverService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
